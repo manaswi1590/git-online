@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">  
+    <head >
+        <title>Manaswi's portfolio</title>
+        <link rel="icon" href="favicon.png.png" type=image/png>
+
+      <link rel = "stylesheet"
+      href="style.css"> 
+
+    </head>
+    <body>
+        <h1 id="main-title">
+            Welcome to my Website!
+        </h1>
+
+        <button  id="resetButton" class ="fancy-button"> Reset!</button>
+        <p id="message"></p>
+        
+        <h2>About me!</h2>
+        </h2 class="fancy-card">
+        <button id="clickButton" class="fancy-button"> Click to know about me!</button>
+        <p id="message"></p>
+             
+            <br>
+            <blockquote>"Time is invented by clock companies to sell more clocks" - Karl Marx </blockquote> 
+            <br>
+             <h3>My skills</h3>
+             <ul>
+                <li>Java</li>
+                <li>JavaScript</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>HTML</li>
+             </ul>
+             <h4>My hobbies</h4>
+             <ol>
+                <li>Coding</li>
+                <li>Singing</li>
+                <li>Dancing</li>
+                <li>Drawing</li>
+                <li>Reading</li>
+             </ol>
+             <div
+                class="container">
+            <h5>My portfolio links</h5>
+             <ol>
+                <li> <a href="www.youtube.com" target="_blank">Check my link 1!</a></li>
+                <li> <a href= "www.twitter.com" target="_blank"> Check my link 2!</a></li>
+                <li> <a href= "www.facebook.com" target="_blank"> Check my link 3! </a></li>
+                </ol>
+                </div>
+
+             <a href="https://github.com" target="_blank">Visit my Github!</a>
+             <br>
+            <!--MY IMAGES!-->
+             <img src="https://picsum.photos/id/237/550/400" 
+             alt="Ufff, uploads">
+
+            <!--JAVA SCRIPT-->
+
+             <script>
+                let btn = document.getElementById("clickButton");
+                let message = document.getElementById("message");
+                btn.addEventListener("click", function() {
+                    message.innerHTML = "Hello, im pursuing btech in cse at KMIT. I love to code. I always wish that my code should help people!";
+                    message.style.backgroundColor = "#e0f7fa";
+                    message.style.padding = "15px";
+                    message.style.fontWeight = "bold";
+                    message.style.fontFamily = "bitcount";
+                    message.style.color = "#333";
+                    message.style.fontSize = "20px";
+                });
+                
+                // Reset button functionality
+
+                let resetButton = document.getElementById("resetButton");
+                let resetMessage= document.getElementById("message");
+
+                if(sessionStorage.getItem("resetsuccess")=== "true") {
+                    resetMessage.innerHTML = "Page has been reset!";
+                    resetMessage.style.color = "green";
+                    sessionStorage.removeItem("resetsuccess");}
+
+                    resetButton.addEventListener("click", function () {
+                        if(confirm("Are you sure you want to reset the page?")) {
+                            sessionStorage.setItem("resetsuccess", "true");
+                            resetMessage.innerHTML = "Page has been reset!";
+                            resetMessage.style.color = "green";
+                            resetMessage.style.fontSize = "20px";
+                            resetMessage.style.textAlign= "center";
+                        } else {
+                            resetMessage.innerHTML = "Reset cancelled.";
+                            resetMessage.style.color = "red";
+                        }
+                    location.reload(); 
+                    });
+             </script>
+    </body>
+</html>
