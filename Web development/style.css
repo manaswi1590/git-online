@@ -77,4 +77,8 @@
             .fancy-button:hover {
             background-color: #afdce6;
             transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(58, 44, 44, 0.2);}
+
+            .fancy-button:active {
+            background-color: #d1e7f0;  
         }

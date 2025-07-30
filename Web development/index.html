@@ -5,7 +5,7 @@
         <link rel="icon" href="favicon.png.png" type=image/png>
 
       <link rel = "stylesheet"
-      href="style.css"> 
+      href="style.css"/> 
 
     </head>
     <body>
@@ -13,11 +13,10 @@
             Welcome to my Website!
         </h1>
 
-        <button  id="resetButton" class ="fancy-button"> Reset!</button>
-        <p id="message"></p>
+        <button  id="resetButton" class="fancy-button"> Reset!</button>
+        <p id="resetMessage"></p>
         
-        <h2>About me!</h2>
-        </h2 class="fancy-card">
+        <h2 class="fancy-card">About me!</h2>
         <button id="clickButton" class="fancy-button"> Click to know about me!</button>
         <p id="message"></p>
              
@@ -28,7 +27,7 @@
              <ul>
                 <li>Java</li>
                 <li>JavaScript</li>
-                <li>C++</li>
+                <li>CSS</li>
                 <li>Python</li>
                 <li>HTML</li>
              </ul>
@@ -44,9 +43,9 @@
                 class="container">
             <h5>My portfolio links</h5>
              <ol>
-                <li> <a href="www.youtube.com" target="_blank">Check my link 1!</a></li>
-                <li> <a href= "www.twitter.com" target="_blank"> Check my link 2!</a></li>
-                <li> <a href= "www.facebook.com" target="_blank"> Check my link 3! </a></li>
+                <li> <a href="https://youtube.com" target="_blank">Check my link 1!</a></li>
+                <li> <a href= "https://twitter.com" target="_blank"> Check my link 2!</a></li>
+                <li> <a href= "https://facebook.com" target="_blank"> Check my link 3! </a></li>
                 </ol>
                 </div>
 
@@ -54,7 +53,7 @@
              <br>
             <!--MY IMAGES!-->
              <img src="https://picsum.photos/id/237/550/400" 
-             alt="Ufff, uploads">
+             alt="Random placeholder image">
 
             <!--JAVA SCRIPT-->
 
@@ -66,7 +65,7 @@
                     message.style.backgroundColor = "#e0f7fa";
                     message.style.padding = "15px";
                     message.style.fontWeight = "bold";
-                    message.style.fontFamily = "bitcount";
+                    message.style.fontFamily = "Arial, sans-serif";
                     message.style.color = "#333";
                     message.style.fontSize = "20px";
                 });
@@ -74,7 +73,7 @@
                 // Reset button functionality
 
                 let resetButton = document.getElementById("resetButton");
-                let resetMessage= document.getElementById("message");
+                let resetMessage= document.getElementById("resetMessage");
 
                 if(sessionStorage.getItem("resetsuccess")=== "true") {
                     resetMessage.innerHTML = "Page has been reset!";
