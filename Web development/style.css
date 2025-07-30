@@ -80,7 +80,7 @@
             box-shadow: 0 6px 8px rgba(58, 44, 44, 0.2);}
 
             .fancy-button:active {
-            background-color: #d1e7f0;  
+            background-color: #0b0b0b;  
             transform: scale(0.95);
             box-shadow: 0 4px 6px rgba(58, 44, 44, 0.1);
             }
