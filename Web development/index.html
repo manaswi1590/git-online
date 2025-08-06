@@ -12,11 +12,16 @@
         <h1 id="main-title">
             Welcome to my Website!
         </h1>
+         <!--QUOTE BOX!-->
+
+        <div id="quoteBox" class="quote"></div>
 
         <button id="resetButton" class="fancy-button"> Reset!</button>
         <p id="resetMessage"></p>
         
-        <h2 class="fancy-card">About me!</h2>
+        <h2 class="fancy-card" id="bioTitle"> About me!</h2>
+        <p id="bioText"></p>
+
         <button id="clickButton" class="fancy-button"> Click to know about me!</button>
         <p id="message"></p>
              
@@ -51,9 +56,14 @@
 
              <a href="https://github.com" target="_blank">Visit my Github!</a>
              <br>
+
+
             <!--MY IMAGES!-->
              <img src="https://picsum.photos/id/237/550/400" 
              alt="Random placeholder image">
+
+        
+
 
             <!--JAVA SCRIPT-->
 
@@ -93,6 +103,36 @@
                         }
                     location.reload(); 
                     });
+
+                    const quoteBox = document.getElementById("quoteBox");
+                    quoteBox.textContent = "This is a quote box!";
+                    quoteBox.style.backgroundColor = "#f0f8ff";
+                    quoteBox.style.border = "2px solid #ccc";
+
+                    const quotes = [
+                        "The only way to do great work is to love what you do.",
+                        "Success is not the key to happiness. Happiness is the key to success.",
+                        "Believe you can and you're halfway there."
+                    ];
+
+                const random= Math.floor(Math.random() * quotes.length);
+                quoteBox.textContent = quotes[random];
+
+                quoteBox.style.margin = "20px auto";
+                quoteBox.style.width = "80%";
+                quoteBox.style.textAlign = "center";    
+                quoteBox.style.fontSize = "18px";
+                quoteBox.style.color = "#555";
+                quoteBox.style.fontFamily = "https://fonts.google.com/specimen/Playwrite+HU";
+                quoteBox.style.padding = "10px";
+                quoteBox.style.border = "1px solid #ccc";
+                
+                        
+
+
+                        
+                        
+                   
              </script>
     </body>
 </html>
